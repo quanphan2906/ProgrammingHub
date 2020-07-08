@@ -1,0 +1,33 @@
+/* 
+Sources: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+I. Style for flexbox containers
+    1. In flex system, style the layout according to the main axis and the cross axis,
+    not horizontal and vertical axis
+
+    2. if display is row, main axis is horizontal and cross axis is vertical
+    if display if column, main axis is vertical and cross axis is horizontal
+
+    3. if want to style individual items based on the main axis, use justify-content (default: flex-start)
+
+    4. if want to style individual items based on the cross axis, use align-items (default: stretch)
+    in order to center according to the cross axis, "align-items: center"
+
+    5. align-content: This aligns a flex container’s lines 
+    (so used when there are multi-lines in a flexbox container) 
+    within when there is extra space in the cross-axis, 
+    (very) similar to how justify-content aligns individual items within the main-axis.
+
+II. Style for flexbox items
+    1. use to override or apply flexible size to the items
+
+    2. flex-shrink: the ability of an item to shrink (default: 1)
+    if set to 0,  dont shrink at all
+
+    3. flex-grow: defines the ability of items to grow when there is extra space
+    If all items have flex-grow set to 1, 
+    the remaining space in the container will be distributed equally to all children. 
+    If one of the children has a value of 2, the remaining space would take up twice as much space as the others
+
+    4. flex-basis: This defines the default size of an element before the remaining space is distributed
+    */
