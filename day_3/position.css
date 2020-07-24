@@ -1,13 +1,28 @@
 /* https://www.youtube.com/watch?v=jx5jmI0UlXU */
 
+/* 
+position: static | absolute | relative | fixed | sticky
+left
+right
+top
+bottom
+*/
+.grand-parent {
+    position: relative;
+}
+
 .parent {
+    position: relative;
 }
 
 .child-one {
     position: absolute;
+    top: 5px;
 }
 
 .child-two {
+    position: relative;
+    top: 100px;
 }
 
 .child-three {

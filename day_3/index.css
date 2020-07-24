@@ -10,6 +10,11 @@ span {
     color: yellow;
 }
 
+.example-box-shadow {
+    margin: 100px 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
 /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
 /* The horizontal offset (required) of the shadow, positive means the shadow will be on the right of the box, a negative offset will put the shadow on the left of the box.
 The vertical offset (required) of the shadow, a negative one means the box-shadow will be above the box, a positive one means the shadow will be below the box.
