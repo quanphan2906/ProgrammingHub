@@ -1,0 +1,22 @@
+.noti {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 12px;
+}
+
+.game-container {
+    width: 100vw;
+    /* height: 70vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    font-size: 30px;
+    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+}
