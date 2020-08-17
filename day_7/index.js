@@ -114,6 +114,7 @@ cells.forEach((cell) => {
             if (isOver) {
                 console.log("Yolo");
                 console.log(noti);
+                //BUG HERE: dont know why cannot change innerHTML or innerText at all
                 noti.innerHTML = "Hello";
                 noti.innerText = "Heloo";
             }
