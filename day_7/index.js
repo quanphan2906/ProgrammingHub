@@ -3,8 +3,7 @@ const X = "X";
 const O = "O";
 const NONE = "";
 const GAME_OVER = "GAME OVER. The winner is ";
-const CHOOSE_OTHER_CELL =
-    "Please choose another cell. This cell has been ticked";
+const GREETING = "Welcome to tic tac toe game. It is player X turn";
 
 const winningCombos = [
     [
@@ -89,12 +88,12 @@ const gameOver = (notiEle, winner) => {
     notiEle.innerText = "";
     notiEle.appendChild(notiLine);
     notiEle.appendChild(winnerEle);
-    console.log(notiEle.childNodes[0]);
 };
 
 // query
 const cells = document.querySelectorAll("td");
 const noti = document.getElementsByClassName("noti")[0];
+const restartBtn = document.getElementById("restart-button");
 
 // main
 cells.forEach((cell) => {
@@ -112,11 +111,7 @@ cells.forEach((cell) => {
             var isOver = checkIfOver(map, currentPlayer);
 
             if (isOver) {
-                console.log("Yolo");
-                console.log(noti);
-                //BUG HERE: dont know why cannot change innerHTML or innerText at all
-                noti.innerHTML = "Hello";
-                noti.innerText = "Heloo";
+                gameOver(noti, currentPlayer);
             }
 
             // state change
@@ -128,9 +123,26 @@ cells.forEach((cell) => {
                 currentPlayer = X;
             }
 
-            noti.innerText = `It is player ${currentPlayer} turn`;
-        } else {
-            noti.innerText = CHOOSE_OTHER_CELL;
+            if (!isOver) noti.innerText = `It is player ${currentPlayer} turn`;
         }
     });
+});
+
+restartBtn.addEventListener("click", () => {
+    map = [
+        [NONE, NONE, NONE],
+        [NONE, NONE, NONE],
+        [NONE, NONE, NONE],
+    ];
+
+    currentPlayer = X;
+
+    for (let i = 0; i < map.length; i++) {
+        for (let j = 0; j < map[i].length; j++) {
+            const cell = document.getElementById(`${i}-${j}`);
+            cell.innerText = map[i][j];
+        }
+    }
+
+    noti.innerHTML = GREETING;
 });
