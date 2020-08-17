@@ -31,3 +31,10 @@ II. Style for flexbox items
 
     4. flex-basis: This defines the default size of an element before the remaining space is distributed
     */
+
+.post-summary {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    border: 4px dotted red;
+    border-radius: 4px;
+}
