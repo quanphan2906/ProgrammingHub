@@ -8,14 +8,15 @@ function changeColor() {
     youtube.style.backgroundColor = "green";
 }
 
-function delColor() {
+function delColor(e) {
     youtube.style.backgroundColor = "white";
 }
 
 const color = "red";
 
 // anonymous function
-button.addEventListener("click", function () {
+button.addEventListener("click", function (event) {
+    event.target.innerHTML = "Yolo";
     hello.innerText = "Microsoft";
     hello.style.color = color;
     console.log("AAAAAAAAAAAAAA");
@@ -24,14 +25,35 @@ button.addEventListener("click", function () {
 youtube.addEventListener("mouseover", changeColor);
 youtube.addEventListener("mouseleave", delColor);
 
+const form = document.getElementById("my-name");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log();
+});
+
 /* 
 element = {
     addEventListener: function(event, function_user) {
         khi ma event happen:
-            function_user()
+            event = {
+                target: ...
+                vi tri click chuot:...
+                timeline: ...
+            }
+            function_user(event)
     }
 }
 
 element.addEventListener("click", )
+
+// click on button
+event = { 
+    target: ...,
+    preventDefault: function() {
+
+    }
+}
+event.preventDefault()
+(event)
 
 */
